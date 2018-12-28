@@ -10,7 +10,7 @@ def get_report():
     Returns the current forecast of Berkeley right now
     """
     response = urlopen(
-        'http://api.openweathermap.org/data/2.5/weather?q=Berkeley,ca')
+        'http://api.openweathermap.org/data/2.5/weather?q=Berkeley,ca&appid=9f3cf5348d809e288de831f8d0651c15')
     rawWeatherData = response.read().decode("utf-8")
     weatherData = json.loads(rawWeatherData)
 
